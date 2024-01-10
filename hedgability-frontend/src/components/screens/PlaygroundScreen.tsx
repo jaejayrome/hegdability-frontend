@@ -1,4 +1,5 @@
 import { TypeAnimation } from "react-type-animation";
+import Lock from "../utils/Lock";
 
 const sequence = [
     'Choose Your Configuration to Begin',
@@ -8,14 +9,7 @@ const PlaygroundScreen = () => {
 
 
     return <>
-        <div> 
-            <div className="w-full">
-                <div className=""> 
-                    <TypeAnimation sequence={sequence} omitDeletionAnimation/>
-                </div> 
-                
-            </div>
-        </div>
+        <Lock theme="Playground"/>
     </>
 }
 

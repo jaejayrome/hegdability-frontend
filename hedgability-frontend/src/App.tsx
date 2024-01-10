@@ -4,6 +4,7 @@ import HomeScreen from "./components/screens/HomeScreen";
 import Footer from "./components/utils/Footer";
 import ArchitectureScreen from "./components/screens/ArchitectureScreen";
 import DocsScreen from "./components/screens/DocsScreen";
+import PlaygroundScreen from "./components/screens/PlaygroundScreen";
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
         {/* Home Page Section */}
         <Route path = "/" element= {<HomeScreen />}/>
         <Route path = "/design" element= {<ArchitectureScreen />}/>
-        <Route path = "/playground" element= {<HomeScreen />}/>
+        <Route path = "/playground" element= {<PlaygroundScreen />}/>
         <Route path = "/docs" element= {<DocsScreen />}/>
       </Routes>
 

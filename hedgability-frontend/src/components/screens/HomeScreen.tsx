@@ -49,11 +49,19 @@ const HomeScreen = () => {
                                 <div className="flex flex-col items-center justify-center">
                                     <GiSpanner />
                                     <span> Automated Training </span>
+                                    {/* <div className="flex flex-col items-center justify-center"> 
+                                        <span> Hedgability trains a customised machine learning model in accordance to your requirements as a liquidity provider.</span>
+                                        <span> Your Model is trained at the time of request which ensures that data used is the most updated in the market </span>
+                                    </div> */}
                                 </div>
 
                                 <div className="flex flex-col items-center justify-center">
                                     <SiEasyeda />
                                     <span> Seamless Integration </span>
+                                    <div className="flex flex-col items-center justify-center"> 
+                                        {/* <span> Hedgability trains a customised machine learning model in accordance to your requirements as a liquidity provider.</span>
+                                        <span> Your Model is trained at the time of request which ensures that data used is the most updated in the market </span> */}
+                                    </div>
                                 </div>
                             </div>
                         </div>

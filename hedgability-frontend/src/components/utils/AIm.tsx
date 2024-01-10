@@ -1,11 +1,11 @@
 import { Code, CodeBlock, dracula } from "react-code-blocks";
 
 
-const toRender = "Utilise Backtested Machine Learning Models tested and trained in curation for particular pools in UniswapV3.\n Hello";
+const toRender = "Provide Liquidity Providers an Everyday Hedging Strategy to combat Impermanent Loss.\n Exclusive to UniSwapV3 with the use of backtested and sophisticated machine learning models";
 
 const Aim = () => {
     return <>
-        <div className="flex flex-col items-center justify-center my-20">
+        <div className="flex flex-col items-center justify-center my-10">
             <div className="font-bold text-3xl"> 
                 Our Aim
             </div>
