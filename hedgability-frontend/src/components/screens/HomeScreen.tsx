@@ -1,50 +1,73 @@
 import { TypeAnimation } from "react-type-animation";
+import { GiSpanner } from "react-icons/gi";
+import { SiEasyeda } from "react-icons/si";
+import Team from "./TeamScreen";
+import Aim from "../utils/AIm";
 
 const sequence = [
-    'Join the Hedge',
+    'join the hedge',
     1000,
-    'Become a Hedginator',
+    'become a hedginator',
+    1000,
+    'use the api',
     1000
 ]
 
 const HomeScreen = () => {
     return (
-    <div>
-        {/* Title Section */}
-        <div className="flex justify-center items-center my-4">
-            <div className="flex-column text-left"> 
-                <div className="font-bold text-4xl"> Hedgability </div>
-                <div className = "my-0"> 
-                    <span className="text-xl">invites you to</span>            
-                </div>
-                <div className="my-0 bg-gradient-to-r from-gray-400 to-gray-700 bg-clip-text"> 
-                    <TypeAnimation
-                    sequence={sequence}
-                    wrapper="span"
-                    speed={50}
-                    deletionSpeed={50}
-                    repeat={Infinity}
-                    className="text-2xl text-transparent"
-                    />
+        <>
+        <div className="flex flex-col md:flex-row md:space-y-0 space-y-16 my-10 mx-4 items-center justify-around">
+            {/* Title Section */}
+            <div className="flex-1 flex justify-center items-center">
+                <div className="flex-column text-left"> 
+                    <div className="font-bold sm:text-4xl md:text-6xl text-3xl font-mono my-8"> Hedgability </div>
+                    <div className = "my-0"> 
+                        <span className="text-xl font-mono">invites you to</span>            
+                    </div>
+                    <div className="my-0 font-mono "> 
+                        <TypeAnimation
+                        sequence={sequence}
+                        wrapper="span"
+                        speed={50}
+                        deletionSpeed={50}
+                        repeat={Infinity}
+                        className="text-2xl text-black shadow-[0_10px_20px_rgba(240,_46,_170,_0.7)]"
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
 
-        {/* Features Section */}
-        <div className="px-2"> 
-            <div className="rounded-lg bg-gray-100"> 
-                <div className="text-gray-600">
-                    <span>TheHedge API in action</span>
+            {/* Features Section */}
+            <div className="flex-1 flex items-center justify-center px-2"> 
+                <div className="rounded-lg bg-gray-100 px-12 py-6"> 
+                    <div className="text-black">
+                        <div className="mb-4"> 
+                            <span className="font-bold ">Hedgability's API in action</span>
+                        </div>
+                        <div className=""> 
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                <div className="flex flex-col items-center justify-center">
+                                    <GiSpanner />
+                                    <span> Automated Training </span>
+                                </div>
 
-                    <div className=""> 
-                        <div className="grid grid-cols-3 gap-2">
-                            
+                                <div className="flex flex-col items-center justify-center">
+                                    <SiEasyeda />
+                                    <span> Seamless Integration </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        {/* Team Section */}
+        <Aim/>
+
+        {/* Team Section */}
+        <Team />
+        </>
     )
 }
 
