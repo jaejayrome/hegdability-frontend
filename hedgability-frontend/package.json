@@ -16,13 +16,15 @@
     "@floating-ui/react": "^0.26.5",
     "@nextui-org/avatar": "^2.0.24",
     "@popperjs/core": "^2.11.8",
-    "framer-motion": "^10.17.9",
+    "framer-motion": "^10.18.0",
     "react": "^18.2.0",
     "react-code-blocks": "^0.1.5",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
+    "react-intersection-observer": "^9.5.3",
     "react-popper": "^2.3.0",
     "react-router-dom": "^6.21.1",
+    "react-toastify": "^10.0.1",
     "react-type-animation": "^3.2.0"
   },
   "devDependencies": {

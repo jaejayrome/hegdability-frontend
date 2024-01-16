@@ -16,7 +16,7 @@ const sequence = [
 const HomeScreen = () => {
     return (
         <>
-        <div className="flex flex-col md:flex-row md:space-y-0 space-y-16 my-10 mx-4 items-center justify-around">
+        <div className="w-full max-h-screen flex flex-col md:flex-row md:space-y-0 space-y-16 my-10 mx-4 items-center justify-around">
             {/* Title Section */}
             <div className="flex-1 flex justify-center items-center">
                 <div className="flex-column text-left"> 

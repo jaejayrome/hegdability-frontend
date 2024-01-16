@@ -1,8 +1,31 @@
 import { RiCopyrightFill } from "react-icons/ri"
 
-const Footer = () => {
+interface Props {
+    backgroundColor: string
+}
+
+const Footer = (props: Props) => {
+    let backgroundColor = props.backgroundColor
+    switch (true) {
+        case props.backgroundColor.includes("white"):
+        backgroundColor = "bg-gray-100";
+        break;
+        case props.backgroundColor.includes("green"):
+            backgroundColor = "bg-green-400";
+            break;
+            case props.backgroundColor.includes("blue"):
+            backgroundColor = "bg-blue-400";
+            break;
+            case props.backgroundColor.includes("pink"):
+            backgroundColor = "bg-pink-400";
+            break;
+            default:
+            backgroundColor = "bg-gray-600";
+            break;
+        }
+
     return <>
-        <div className="w-screen bg-gray-100 fixed bottom-0"> 
+        <div className={`${backgroundColor} w-full fixed bottom-0`}> 
             <div className="flex flex-row justify-center gap-x-4 items-center py-2 text-sm"> 
                 <div className="flex flex-row"> 
                     <span> Est. 2024</span>

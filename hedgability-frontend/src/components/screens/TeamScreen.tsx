@@ -1,13 +1,10 @@
 import Calista from "../../assets/Calista.jpeg"
 import Sirui from "../../assets/Sirui.jpeg"
 import Jerome from "../../assets/Jerome.jpeg"
-import { Avatar } from "@chakra-ui/react";
 
 const Team = () => {
-
-
     return (
-        <div className="flex flex-col items-center justify-center my-20">
+        <div className="flex flex-col items-center justify-center ">
 
             <div className="font-bold text-3xl"> 
                 Our Team

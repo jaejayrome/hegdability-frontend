@@ -10,7 +10,7 @@ const Aim = () => {
                 Our Aim
             </div>
 
-            <div className="py-4 px-8 rounded-lg mt-2"> 
+            <div className="py-4 px-8 mt-2"> 
                 <CodeBlock
                     text={toRender}
                     language="javascript"
