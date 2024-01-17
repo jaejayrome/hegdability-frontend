@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <div className={`${color} w-screen min-h-screen overflow-x-hidden`}>
-      <div className="flex-column overflow-x-hidden">
+      <div className="flex-column px-4">
         {/* Navbar Section */}
         <div className="w-full mt-6 px-6">
           <Navbar />
@@ -48,12 +48,10 @@ const App = () => {
           <Route path="/design" element={<ArchitectureScreen />} />
           <Route path="/playground" element={<PlaygroundScreen />} />
           <Route path="/docs" element={<DocsScreen />} />
-          {/* <Route path="/nav" element={<NavModal isOpen={isOpen} onOpen={onOpen} onClose={onClose}/>} /> */}
         </Routes>
-
-        {/* Footer Section */}
-        <Footer backgroundColor={color}/>
       </div>
+          {/* Footer Section */}
+          <Footer backgroundColor={color}/>
     </div>
   );
 };

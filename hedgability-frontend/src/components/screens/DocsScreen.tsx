@@ -19,10 +19,10 @@ const DocsScreen = () => {
     ]
 
     return <>
-        <div className="w-full h-screen">
+        <div className="w-full min-h-screen h-fit">
             {!isLoading ? 
-            <div className="animate-pulse flex flex-col items-center justify-center">
-                <div className="bg-gradient-to-t from-green-200 from-20% to-green-400 to-100% text-transparent w-fit text-6xl font-bold px-2 py-2 rounded-md mb-10"> 
+            <div className="animate-pulse flex flex-col items-center justify-center mt-10">
+                <div className="bg-gradient-to-t from-green-200 from-20% to-green-400 to-100% text-transparent w-fit text-3xl sm:text-6xl font-bold px-2 py-2 rounded-md mb-10"> 
                     <span className="text-transparent">
                             Documentation
                     </span>
@@ -38,8 +38,8 @@ const DocsScreen = () => {
                 </div>
             </div>
             :
-            <div className="flex flex-col items-center justify-center">
-                <div className="bg-gradient-to-t from-green-400 from-10% to-green-800 to-100% bg-clip-text w-fit text-5xl font-light font-mono px-2 mb-10"> 
+            <div className="flex flex-col items-center justify-center mt-10">
+                <div className="bg-gradient-to-t from-green-400 from-10% to-green-800 to-100% bg-clip-text w-fit text-3xl sm:text-5xl font-light font-mono px-2 mb-10"> 
                     <span className="text-transparent">
                             Documentation
                     </span>
@@ -53,8 +53,8 @@ const DocsScreen = () => {
                         />
                     </div>
                 </div>
-                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center space-x-8">
-                        <div className="bg-white rounded-l-lg px-4 py-2">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                        <div className="bg-white rounded-lg px-4 py-2">
                             <div className="flex flex-col items-start justify-center space-y-4">
 
                                 <div className="flex flex-row items-center justify-center text-black space-x-4">
@@ -172,7 +172,7 @@ const DocsScreen = () => {
                             </div>
                         </div>
 
-                        <div className="flex bg-green-800 rounded-r-lg px-4 py-2">
+                        <div className="flex bg-green-800 rounded-lg px-4 py-2">
                             <div className="flex-1 flex-col items-center justify-center">
                                 <div>
                                     <span className="font-semibold text-white"> Example Request </span>

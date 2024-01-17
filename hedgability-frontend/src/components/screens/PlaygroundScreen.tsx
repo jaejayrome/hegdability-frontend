@@ -50,8 +50,8 @@ const PlaygroundScreen = () => {
     return <>
         <div className="w-full h-screen">
             {!isLoading ? 
-            <div className="animate-pulse flex flex-col items-center justify-center my-4">
-                <div className="bg-gradient-to-t from-pink-200 from-30% to-pink-400 to-100% text-transparent w-fit text-6xl font-bold px-2 py-2 rounded-md"> 
+            <div className="animate-pulse flex flex-col items-center justify-center my-4 mt-10">
+                <div className="bg-gradient-to-t from-pink-200 from-30% to-pink-400 to-100% text-transparent w-fit text-3xl sm:text-6xl font-bold px-2 py-2 rounded-md"> 
                     <span className="text-transparent">
                         Playground
                     </span>
@@ -109,8 +109,8 @@ const PlaygroundScreen = () => {
                     </div>
                 </div>
             </div> :
-            <div className="flex flex-col w-full justify-center items-center">
-                <div className="text-transparent bg-gradient-to-t from-pink-300 from-30% to-pink-800 to-100% bg-clip-text w-fit text-5xl font-light font-mono px-2">
+            <div className="flex flex-col w-full justify-center items-center mt-10">
+                <div className="text-transparent bg-gradient-to-t from-pink-300 from-30% to-pink-800 to-100% bg-clip-text w-fit text-3xl sm:text-5xl font-light font-mono px-2">
                     <span className="text-transparent">
                             Playground
                     </span>
@@ -125,7 +125,7 @@ const PlaygroundScreen = () => {
                     </div>
                 </div>
 
-                <div className="flex-col bg-slate-700 my-8 px-8 rounded-lg">
+                <div className="flex-col bg-slate-700 my-8 sm:px-8 px-0 rounded-lg">
                     <div className="flex-2 px-4 py-2 items-center justify-center">
                         <div className="text-white">
                             1. Choose <span className="text-pink-200"> Uniswap V3 </span> Token Pair

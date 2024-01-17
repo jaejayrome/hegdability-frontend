@@ -16,7 +16,7 @@ const sequence = [
 const HomeScreen = () => {
     return (
         <>
-        <div className="w-full max-h-screen flex flex-col md:flex-row md:space-y-0 space-y-16 my-10 mx-4 items-center justify-around">
+        <div className="w-full max-h-screen flex flex-col md:flex-row md:space-y-0 space-y-16 my-10 md:mx-4 items-center justify-around">
             {/* Title Section */}
             <div className="flex-1 flex justify-center items-center">
                 <div className="flex-column text-left"> 
@@ -39,7 +39,7 @@ const HomeScreen = () => {
 
             {/* Features Section */}
             <div className="flex-1 flex items-center justify-center px-2"> 
-                <div className="rounded-lg bg-gray-100 px-12 py-6"> 
+                <div className="rounded-lg bg-gray-100 px-12 py-6 md:mx-8"> 
                     <div className="text-black">
                         <div className="mb-4"> 
                             <span className="font-bold ">Hedgability's API in action</span>
@@ -70,9 +70,9 @@ const HomeScreen = () => {
             </div>
         </div>
 
-        {/* Team Section */}
+        {/* Aim Section */}
         <Aim/>
-
+        
         {/* Team Section */}
         <Team />
         </>

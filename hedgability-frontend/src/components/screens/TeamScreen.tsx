@@ -6,7 +6,7 @@ const Team = () => {
     return (
         <div className="flex flex-col items-center justify-center ">
 
-            <div className="font-bold text-3xl"> 
+            <div className="font-bold text-xl sm:text-3xl"> 
                 Our Team
             </div>
 
