@@ -1,6 +1,14 @@
-import Lock from "../utils/Lock";
 import { useState, useEffect} from "react";
 import { TypeAnimation } from "react-type-animation";
+import Stage1 from "../../assets/Stage 1.png"
+import Stage2 from "../../assets/Stage 2.png"
+import {
+    List,
+    ListItem,
+    ListIcon,
+    OrderedList,
+    UnorderedList,
+  } from '@chakra-ui/react'
 
 const sequence = [
     'Building Blocks of Hedgability',
@@ -17,7 +25,7 @@ const ArchitectureScreen = () => {
     }, [])
     
     return <>
-        <div className="w-full h-screen">
+        <div className="w-full min-h-screen h-fit">
             {!isLoading ?
                 <div className="animate-pulse flex flex-col items-center justify-center mt-10">
                     <div className="bg-gradient-to-t from-blue-200 from-30% to-blue-400 to-100% text-transparent w-fit text-6xl font-bold px-2 py-2 rounded-md"> 
@@ -28,7 +36,7 @@ const ArchitectureScreen = () => {
                 </div>
             : 
             <div className="flex flex-col w-full justify-center items-center mt-10">
-                <div className="text-transparent bg-gradient-to-t from-blue-300 from-30% to-blue-800 to-100% bg-clip-text w-fit text-5xl font-light font-mono px-2">
+                <div className="flex flex-col justify-center items-center text-transparent bg-gradient-to-t from-blue-300 from-30% to-blue-800 to-100% bg-clip-text w-fit text-5xl font-light font-mono px-2">
                     <span className="text-transparent">
                             Design
                     </span>
@@ -42,31 +50,44 @@ const ArchitectureScreen = () => {
                         />
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-evenly mt-4">
-                    <div>
-                        Hello
-                    </div>
-
-                    {/* Second Part of Architecture Explanation */}
-                    <div className="bg-blue-800 rounded-md px-4 py-2">
-                        <div className="flex flex-col items-center justify-around text-white">
-                            {/* Stage 1 */}
-                            <div>
-                                <span className="text-lg">
-                                    Stage 1
-                                </span>
+                <div className="flex flex-col items-center justify-evenly mt-4">
+                    <div className="flex flex-col items-center justify-center space-y-6">
+                        <div className="flex flex-col md:flex-row items-center justify-center">
+                            <div className="min-w-[280px] max-w-[700px] h-3/4 mx-4 ">
+                                <img src={Stage1} />
                             </div>
 
-                            <div>
-                                <span className="text-lg">
-                                    Stage 2
-                                </span>
-                            </div>
+                            <div className="bg-blue-800 rounded-lg px-4 py-2 text-white text-[15px] md:text-lg"> 
+                                Stage 1: Obtain Hedging Strategy For Following Week
 
-                            <div>
-                                <span className="text-lg">
-                                    Stage 3
-                                </span>
+                                <div className="mt-2 text-[10px] md:text-xs font-mono">
+                                    <UnorderedList className="space-y-1">
+                                        <ListItem> User Interacts Via Frontend / Hegdability API </ListItem>
+                                        <ListItem> Hedgability Core Backend would transfer predictors to ML Pipeline </ListItem>
+                                        <ListItem> ML Pipeline App would locally install the latest 14 days from central S3 Bucket </ListItem>
+                                        <ListItem> ML Pipeline App would run the model, call APIs and formulate final hedging strategy </ListItem>
+                                        <ListItem> Predictions display back to user </ListItem>
+                                    </UnorderedList>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col md:flex-row items-center justify-center">
+                        <div className="min-w-[280px] max-w-[700px] h-3/4 mx-4 ">
+                            <img src={Stage2} />
+                        </div>
+                        <div className="bg-blue-800 rounded-lg px-4 py-2 text-white text-[15px] md:text-lg"> 
+                                Stage 2: Cron Job to Obtain the Latest 14 Day Data
+
+                                <div className="mt-2 text-[10px] md:text-xs font-mono">
+                                    <UnorderedList className="space-y-1">
+                                        <ListItem> User Interacts Via Frontend / Hegdability API </ListItem>
+                                        <ListItem> Hedgability Core Backend would transfer predictors to ML Pipeline </ListItem>
+                                        <ListItem> ML Pipeline App would locally install the latest 14 days from central S3 Bucket </ListItem>
+                                        <ListItem> ML Pipeline App would run the model, call APIs and formulate final hedging strategy </ListItem>
+                                        <ListItem> Predictions display back to user </ListItem>
+                                    </UnorderedList>
+                                </div>
                             </div>
                         </div>
                     </div>
