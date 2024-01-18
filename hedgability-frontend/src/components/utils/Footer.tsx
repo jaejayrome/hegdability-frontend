@@ -11,13 +11,13 @@ const Footer = (props: Props) => {
         backgroundColor = "bg-gray-100";
         break;
         case props.backgroundColor.includes("green"):
-            backgroundColor = "bg-green-400";
+            backgroundColor = "bg-gradient-to-t from-green-300 from-10% to-green-100";
             break;
             case props.backgroundColor.includes("blue"):
-            backgroundColor = "bg-blue-400";
+            backgroundColor = "bg-gradient-to-t from-blue-300 from-10% to-blue-100";
             break;
             case props.backgroundColor.includes("pink"):
-            backgroundColor = "bg-pink-400";
+            backgroundColor = "bg-gradient-to-t from-pink-300 from-10% to-pink-100";
             break;
             default:
             backgroundColor = "bg-gray-600";

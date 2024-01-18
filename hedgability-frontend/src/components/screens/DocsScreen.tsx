@@ -5,7 +5,7 @@ import { Code, CodeBlock, dracula } from "react-code-blocks";
 
 const DocsScreen = () => {
     const requestBody = "{\n\t''tokenPair'': ''USDC-ETH'',\n\t''amt'': 100000,\n\t''horizon'': 5,\n}";
-    const respBody = "{}";
+    const respBody = "{\n\t''strategy'': {\n\t\t''delivery_price'': 1700,\n\t\t''osqth_amt'': 11.35,\n\t\t ''type'': ''perpertual''\n\t} \n}";
     const [isLoading, setLoading] = useState(false);
     useEffect(() => {
         setTimeout(() => {
