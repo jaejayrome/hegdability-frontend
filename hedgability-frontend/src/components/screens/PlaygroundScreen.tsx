@@ -9,8 +9,7 @@ import USDC from "../../assets/usd-coin-usdc-logo.svg";
 import { Input, InputGroup, InputLeftAddon, InputRightAddon} from "@chakra-ui/react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from 'axios';
-import LoadingModal from "../utils/LoadingModal";
+
 
 const sequence = [
     'Choose Your Configuration to Begin',
@@ -22,8 +21,6 @@ const PlaygroundScreen = () => {
     const [amt, setAmt] = useState(0.00);
     const [days, setDays] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
-    const [isRecommend, setIsRecommend] = useState(false);
-    const [isSubmit, setIsSubmit] = useState(false);
 
     const onSetAmt = (event: any) => {
         setAmt(event.target.value);
@@ -49,17 +46,6 @@ const PlaygroundScreen = () => {
             setLoading(true);
         }, 1500)
     }, [])
-
-    const callBackend = async () => {
-        setIsRecommend(true);
-        try {
-            const prediction = await axios.get(process.env.REACT_APP_HEGDABILITY_CORE_BACKEND_URL + "/hedgingStrat");
-            if (prediction) setIsRecommend(false);
-        } catch (error) {
-            console.log(error)
-        }
-        
-    }
 
 
     return <>
@@ -200,42 +186,13 @@ const PlaygroundScreen = () => {
 
                         <div className="text-white">
                                 <div className="w-full flex items-center justify-center">
-                                    <button className="border-pink-200 border-2 rounded-lg px-2 py-1" onClick={callBackend}>
+                                    <button className="border-pink-200 border-2 rounded-lg px-2 py-1" disabled>
                                         Submit
                                     </button>
                                 </div>
                         </div>
                     </div>
                 </div>
-
-                {isSubmit && <div>
-                    <div className="font-sans font-normal text-md flex flex-col items-start justify-start bg-slate-700 text-white rounded-lg px-4 py-2">
-                        <div className="text-xl text-pink-200"> 
-                            Results:
-                        </div>
-
-                        <div>
-                            Prediction Number: {prediction.predictionNumber}
-                        </div>
-
-                        <div>
-                            Delivery Price: USD {prediction.predictionAmount}
-                        </div>
-
-                        <div>
-                            Amount of oSQTH: {prediction.predictionToken} Tokens
-                        </div> 
-
-                        <div>
-                            Derivative Type: {prediction.predictionTokenType}
-                        </div> 
-                    </div>
-                </div>}
-
-                {isRecommend && 
-                <div> 
-                    <LoadingModal />
-                </div>}
             </div>
             }
         </div>
