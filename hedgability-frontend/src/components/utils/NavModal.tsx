@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
     onClose: () => void;
     }
 
-    const NavModal = ({ isOpen, onClose, onOpen }: Props) => {
+    const NavModal = ({ isOpen, onClose }: Props) => {
     const { pathname } = useLocation();
 
     const [color, setColor] = useState('bg-gradient-to-r from-yellow-600 to-red-600');

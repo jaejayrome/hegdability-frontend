@@ -3,10 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import Stage1 from "../../assets/Stage 1.png"
 import Stage2 from "../../assets/Stage 2.png"
 import {
-    List,
     ListItem,
-    ListIcon,
-    OrderedList,
     UnorderedList,
   } from '@chakra-ui/react'
 

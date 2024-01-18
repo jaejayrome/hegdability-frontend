@@ -17,24 +17,14 @@ const sequence = [
 const PlaygroundScreen = () => {
     const [isLoading, setLoading] = useState(false);
     const [chosen, setChosen] = useState(false);
-    const [amt, setAmt] = useState(0.00);
-    const [days, setDays] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
-
-    const onSetAmt = (event: any) => {
-        setAmt(event.target.value);
-    }
-
-    const onSetDays = (event: any) => {
-        setDays(event.target.value);
-    }
 
     const onPairChosen = () => {
         setChosen(!chosen);
         toast("Selected: ETH-USDC!");
     }
 
-    const {refs, floatingStyles} = useFloating({
+    const { refs } = useFloating({
         whileElementsMounted: autoUpdate,
         open: isOpen,
         });
@@ -81,7 +71,7 @@ const PlaygroundScreen = () => {
                                         <InputLeftAddon className="bg-gradient-to-t from-pink-200 from-20% to-pink-400 px-4">
                                         $
                                         </InputLeftAddon>
-                                        <Input placeholder=''className="text-black px-2" onChange={onSetAmt}/>
+                                        <Input placeholder=''className="text-black px-2"/>
                                     </InputGroup>
                                 </div>
                         </div>
@@ -90,7 +80,7 @@ const PlaygroundScreen = () => {
                                 3. Enter Investment <span className="text-transparent"> Horizon </span>
                                 <div>
                                     <InputGroup className="">
-                                        <Input placeholder=''className="text-black px-2" onChange={onSetDays}/>
+                                        <Input placeholder=''className="text-black px-2"/>
                                         <InputRightAddon className="bg-gradient-to-t from-pink-200 from-20% to-pink-400 px-4">
                                         Days
                                         </InputRightAddon>
@@ -165,7 +155,7 @@ const PlaygroundScreen = () => {
                                         <InputLeftAddon className="bg-slate-400 px-4">
                                         $
                                         </InputLeftAddon>
-                                        <Input placeholder=''className="text-black px-2" onChange={onSetAmt}/>
+                                        <Input placeholder=''className="text-black px-2"/>
                                     </InputGroup>
                                 </div>
                         </div>
@@ -174,7 +164,7 @@ const PlaygroundScreen = () => {
                                 3. Enter Investment <span className="text-pink-200"> Horizon </span>
                                 <div>
                                     <InputGroup className="">
-                                        <Input placeholder=''className="text-black px-2" onChange={onSetDays}/>
+                                        <Input placeholder=''className="text-black px-2"/>
                                         <InputRightAddon className="bg-slate-400 px-4">
                                         Days
                                         </InputRightAddon>
