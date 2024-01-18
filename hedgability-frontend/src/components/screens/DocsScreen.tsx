@@ -1,7 +1,6 @@
-import Lock from "../utils/Lock";
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { Code, CodeBlock, dracula } from "react-code-blocks";
+import { CodeBlock, dracula } from "react-code-blocks";
 
 const DocsScreen = () => {
     const requestBody = "{\n\t''tokenPair'': ''USDC-ETH'',\n\t''amt'': 100000,\n\t''horizon'': 5,\n}";

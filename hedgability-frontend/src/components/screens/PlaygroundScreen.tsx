@@ -1,5 +1,4 @@
 import { TypeAnimation } from "react-type-animation";
-import Lock from "../utils/Lock";
 import {useFloating, autoUpdate} from '@floating-ui/react';
 import { useEffect, useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -7,7 +6,7 @@ import { RiArrowLeftRightFill } from "react-icons/ri";
 import Ethereum from "../../assets/ethereum-eth-logo.svg";
 import USDC from "../../assets/usd-coin-usdc-logo.svg";
 import { Input, InputGroup, InputLeftAddon, InputRightAddon} from "@chakra-ui/react";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 

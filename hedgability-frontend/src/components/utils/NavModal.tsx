@@ -1,4 +1,4 @@
-import { Button, Modal, ModalOverlay, ModalContent, useDisclosure, Text } from "@chakra-ui/react";
+import { Modal, ModalOverlay, ModalContent } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";

@@ -1,15 +1,12 @@
 import Logo from "../../assets/logo.svg";
 import { GiHamburgerMenu } from 'react-icons/gi';
-import React, { useState } from 'react';
 import {useFloating, autoUpdate} from '@floating-ui/react';
-import { Link } from "react-router-dom";
 import NavModal from "./NavModal";
 import { useDisclosure } from "@chakra-ui/react";
-import { motion } from "framer-motion"
 
 const Navbar = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const {refs, floatingStyles} = useFloating({
+    const {refs} = useFloating({
         whileElementsMounted: autoUpdate,
         open: isOpen,
         });

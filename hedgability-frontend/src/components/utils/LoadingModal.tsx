@@ -1,7 +1,6 @@
 
-import { Button, Modal, ModalOverlay, ModalContent, useDisclosure, Text } from "@chakra-ui/react";
+import { Modal, ModalOverlay, ModalContent } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import CircularProgress from '@mui/material/CircularProgress';
 
 
 const LoadingModal = () => {
@@ -23,10 +22,6 @@ const LoadingModal = () => {
                 transition={{ duration: 0.1 }}
                 animate={{ opacity: 1 }}
             >
-                <div className="div flex flex-col items-center justify-center space-y-2">
-                    <CircularProgress color="secondary" size="2rem"/>
-                    <span className="font-mono text-sm"> Formulation In Progress... </span>
-                </div>
             </motion.div>
             </ModalContent>
         </Modal>
